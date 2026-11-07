@@ -143,3 +143,20 @@ button.danger {
 #api-permission p {
   margin: 0 0 8px;
 }
+
+#shortcut-list {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+#shortcut-list kbd {
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 600;
+}
+
+#open-shortcuts {
+  margin-top: 8px;
+}

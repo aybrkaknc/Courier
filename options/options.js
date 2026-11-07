@@ -108,6 +108,11 @@ languageInput.addEventListener('change', async () => {
   showStatus('');
 });
 
+element('open-shortcuts').addEventListener('click', () => {
+  if (chrome.commands.openShortcutSettings) chrome.commands.openShortcutSettings();
+  else chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+});
+
 element('grant-api').addEventListener('click', async () => {
   await chrome.permissions.request(API_ORIGINS);
   await refreshApiPermission();
