@@ -45,9 +45,9 @@ Sayfaları, bağlantıları, seçili metinleri, medyayı ve ekran görüntüleri
 
 | İşlem | Varsayılan |
 |---|---|
-| Geçerli sayfayı gönder | Alt+Shift+T |
-| Görünür alanın ekran görüntüsü | Alt+Shift+S |
-| Seçili alanın ekran görüntüsü | Alt+Shift+A |
+| Geçerli sayfayı gönder | Alt+Shift+1 |
+| Görünür alanın ekran görüntüsü | Alt+Shift+2 |
+| Seçili alanın ekran görüntüsü | Alt+Shift+3 |
 
 ## Gereksinimler
 

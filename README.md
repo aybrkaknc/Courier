@@ -45,9 +45,9 @@ Send pages, links, selected text, media and screenshots to Telegram through your
 
 | Action | Default |
 |---|---|
-| Send the current page | Alt+Shift+T |
-| Screenshot of the visible area | Alt+Shift+S |
-| Screenshot of a selected area | Alt+Shift+A |
+| Send the current page | Alt+Shift+1 |
+| Screenshot of the visible area | Alt+Shift+2 |
+| Screenshot of a selected area | Alt+Shift+3 |
 
 ## Requirements
 
