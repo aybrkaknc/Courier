@@ -8,6 +8,8 @@ Courier'ın kendi sunucusu yoktur, analiz veya telemetri toplamaz. Geliştirici 
 
 Bot token'ınız, chat ID'niz ve ayarlarınız tarayıcının yerel eklenti depolamasında tutulur, senkronlanmaz. Ayarlardaki "Tüm verileri sil" düğmesi bunları kaldırır.
 
+Ayarlarda Chat ID'yi bul düğmesine bastığınızda Courier, chat ID'yi okumak için Telegram'dan botun son güncellemelerini ister. Seçtiğiniz chat ID dışında hiçbir şey saklanmaz.
+
 ## Telegram'a gönderilen veriler
 
 Yalnızca siz gönderim başlattığınızda, seçtiğiniz içerik botunuz üzerinden `api.telegram.org` adresine gider: sayfa başlığı ve URL'si, bağlantı, seçili metin, medya URL'si veya dosyası ya da ekran görüntüsü. Medya ve ekran görüntüsü açıklamalarında sayfa URL'si bulunur. Medya URL'si gönderdiğinizde bu adresi Telegram sunucuları çeker. Bu veriler için Telegram'ın kendi [gizlilik politikası](https://telegram.org/privacy) geçerlidir.

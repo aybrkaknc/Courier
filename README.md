@@ -37,9 +37,10 @@ Send pages, links, selected text, media and screenshots to Telegram through your
 ## Getting started
 
 1. **Install** the extension from the [Releases page](../../releases), or build it from source below.
-2. **Create a bot.** Use [@BotFather](https://t.me/BotFather) and copy the token.
-3. **Find your chat ID.** Send your bot a message, open `https://api.telegram.org/bot<token>/getUpdates` and copy the value of `chat.id`.
-4. **Connect.** Open the extension settings, enter the token and chat ID, then save and send a test message.
+2. **Create a bot.** Use [@BotFather](https://t.me/BotFather) and copy the token, or the whole message.
+3. **Paste the token.** Open the extension settings and paste it. Courier picks the token out of the text and checks it.
+4. **Find your chat ID.** Open your bot and send it a message, then press Find chat ID in the settings. For a group or channel, add the bot first.
+5. **Connect.** Save and send a test message.
 
 ### Shortcuts
 

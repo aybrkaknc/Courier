@@ -37,9 +37,10 @@ Sayfaları, bağlantıları, seçili metinleri, medyayı ve ekran görüntüleri
 ## Başlarken
 
 1. **Kurun.** Eklentiyi [Sürümler sayfasından](../../releases) kurun ya da aşağıdaki gibi kaynaktan derleyin.
-2. **Bot oluşturun.** [@BotFather](https://t.me/BotFather) ile bir bot oluşturup token'ını kopyalayın.
-3. **Chat ID'nizi bulun.** Botunuza bir mesaj gönderin, `https://api.telegram.org/bot<token>/getUpdates` adresini açıp `chat.id` değerini kopyalayın.
-4. **Bağlanın.** Eklenti ayarlarını açın, token ve chat ID'yi girin, kaydedip test mesajı gönderin.
+2. **Bot oluşturun.** [@BotFather](https://t.me/BotFather) ile bir bot oluşturup token'ı ya da mesajın tamamını kopyalayın.
+3. **Token'ı yapıştırın.** Eklenti ayarlarını açıp yapıştırın. Courier token'ı metinden ayıklar ve doğrular.
+4. **Chat ID'nizi bulun.** Botunuzu açıp ona bir mesaj gönderin, ardından ayarlarda Chat ID'yi bul düğmesine basın. Grup veya kanal için önce botu ekleyin.
+5. **Bağlanın.** Kaydedip test mesajı gönderin.
 
 ### Kısayollar
 

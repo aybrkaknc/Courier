@@ -15,61 +15,92 @@
         <button type="button" id="grant-api" data-i18n="optGrant"></button>
       </section>
 
-      <form id="bot-form" novalidate>
-        <h2 data-i18n="optBotSection"></h2>
+      <div class="columns">
+        <div class="col">
+          <form id="bot-form" novalidate>
+            <h2 data-i18n="optBotSection"></h2>
 
-        <label for="token" data-i18n="optToken"></label>
-        <div class="row">
-          <input id="token" type="password" autocomplete="off" spellcheck="false">
-          <button type="button" id="toggle-token" class="secondary" data-i18n="optShow"></button>
+            <ol class="steps">
+              <li>
+                <h3 data-i18n="optStep1"></h3>
+                <p class="help" data-i18n="optStep1Help"></p>
+                <div class="row links">
+                  <a class="button" href="https://t.me/BotFather" target="_blank" rel="noopener" data-i18n="optOpenBotFather"></a>
+                </div>
+              </li>
+
+              <li>
+                <h3 data-i18n="optStep2"></h3>
+                <label for="token" data-i18n="optToken"></label>
+                <div class="row">
+                  <input id="token" type="password" autocomplete="off" spellcheck="false">
+                  <button type="button" id="toggle-token" class="secondary" data-i18n="optShow"></button>
+                </div>
+                <p class="help" data-i18n="optTokenHelp"></p>
+                <p id="bot-info" class="help" role="status"></p>
+              </li>
+
+              <li>
+                <h3 data-i18n="optStep3"></h3>
+                <label for="chat-id" data-i18n="optChatId"></label>
+                <input id="chat-id" type="text" autocomplete="off" spellcheck="false">
+                <p class="help" data-i18n="optChatIdHelp"></p>
+                <div class="row links">
+                  <a id="open-bot" class="button" target="_blank" rel="noopener" data-i18n="optOpenBot" hidden></a>
+                  <button type="button" id="find-chat" class="secondary" data-i18n="optFindChat"></button>
+                </div>
+                <div id="chat-choices" class="choices"></div>
+              </li>
+
+              <li>
+                <h3 data-i18n="optStep4"></h3>
+                <div class="row">
+                  <button type="submit" data-i18n="optSave"></button>
+                  <button type="button" id="test" class="secondary" data-i18n="optTest"></button>
+                </div>
+                <p id="status" role="status"></p>
+              </li>
+            </ol>
+          </form>
+
+          <section>
+            <h2 data-i18n="optLanguageSection"></h2>
+            <select id="language" aria-labelledby="language-label">
+              <option value="auto" data-i18n="optLanguageAuto"></option>
+              <option value="en">English</option>
+              <option value="tr">Türkçe</option>
+            </select>
+            <p id="language-label" class="help" data-i18n="optLanguageHelp"></p>
+          </section>
+
+          <section>
+            <h2 data-i18n="optDataSection"></h2>
+            <button type="button" id="delete" class="danger" data-i18n="optDelete"></button>
+          </section>
         </div>
-        <p class="help" data-i18n="optTokenHelp"></p>
 
-        <label for="chat-id" data-i18n="optChatId"></label>
-        <input id="chat-id" type="text" autocomplete="off" spellcheck="false">
-        <p class="help" data-i18n="optChatIdHelp"></p>
+        <div class="col">
+          <section>
+            <h2 data-i18n="optSendingSection"></h2>
+            <label class="check"><input id="silent" type="checkbox"> <span data-i18n="optSilent"></span></label>
+            <label class="check"><input id="no-preview" type="checkbox"> <span data-i18n="optNoPreview"></span></label>
+            <label class="check"><input id="direct-download" type="checkbox"> <span data-i18n="optDirect"></span></label>
+            <p class="help" data-i18n="optDirectHelp"></p>
+          </section>
 
-        <div class="row">
-          <button type="submit" data-i18n="optSave"></button>
-          <button type="button" id="test" class="secondary" data-i18n="optTest"></button>
+          <section>
+            <h2 data-i18n="optShortcutsSection"></h2>
+            <p class="help" data-i18n="optShortcutsDefaults"></p>
+            <ul id="shortcut-list">
+              <li><span data-i18n="cmdSendPage"></span> <kbd>Alt+Shift+1</kbd></li>
+              <li><span data-i18n="cmdSendScreenshot"></span> <kbd>Alt+Shift+2</kbd></li>
+              <li><span data-i18n="cmdSendArea"></span> <kbd>Alt+Shift+3</kbd></li>
+            </ul>
+            <p class="help" data-i18n="optShortcutsHelp"></p>
+            <button type="button" id="open-shortcuts" class="secondary" data-i18n="optShortcutsButton"></button>
+          </section>
         </div>
-        <p id="status" role="status"></p>
-      </form>
-
-      <section>
-        <h2 data-i18n="optSendingSection"></h2>
-        <label class="check"><input id="silent" type="checkbox"> <span data-i18n="optSilent"></span></label>
-        <label class="check"><input id="no-preview" type="checkbox"> <span data-i18n="optNoPreview"></span></label>
-        <label class="check"><input id="direct-download" type="checkbox"> <span data-i18n="optDirect"></span></label>
-        <p class="help" data-i18n="optDirectHelp"></p>
-      </section>
-
-      <section>
-        <h2 data-i18n="optShortcutsSection"></h2>
-        <p class="help" data-i18n="optShortcutsDefaults"></p>
-        <ul id="shortcut-list">
-          <li><span data-i18n="cmdSendPage"></span> <kbd>Alt+Shift+1</kbd></li>
-          <li><span data-i18n="cmdSendScreenshot"></span> <kbd>Alt+Shift+2</kbd></li>
-          <li><span data-i18n="cmdSendArea"></span> <kbd>Alt+Shift+3</kbd></li>
-        </ul>
-        <p class="help" data-i18n="optShortcutsHelp"></p>
-        <button type="button" id="open-shortcuts" class="secondary" data-i18n="optShortcutsButton"></button>
-      </section>
-
-      <section>
-        <h2 data-i18n="optLanguageSection"></h2>
-        <select id="language" aria-labelledby="language-label">
-          <option value="auto" data-i18n="optLanguageAuto"></option>
-          <option value="en">English</option>
-          <option value="tr">Türkçe</option>
-        </select>
-        <p id="language-label" class="help" data-i18n="optLanguageHelp"></p>
-      </section>
-
-      <section>
-        <h2 data-i18n="optDataSection"></h2>
-        <button type="button" id="delete" class="danger" data-i18n="optDelete"></button>
-      </section>
+      </div>
     </main>
     <script type="module" src="options.js"></script>
   </body>

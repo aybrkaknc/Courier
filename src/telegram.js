@@ -33,6 +33,7 @@ function toError(status, body) {
   const code = body?.error_code ?? status;
   const description = body?.description ?? '';
   if (code === 401 || code === 404) return new TelegramError('errToken', { code, description });
+  if (code === 409) return new TelegramError('errUpdatesConflict', { code, description });
   if (code === 403) return new TelegramError('errForbidden', { code, description });
   if (code === 413) return new TelegramError('errTooLarge', { code, description });
   if (code === 429) {
@@ -66,6 +67,22 @@ async function call(token, method, fields = {}) {
 }
 
 export const getMe = (token) => call(token, 'getMe');
+
+export const getUpdates = (token) => call(token, 'getUpdates', {
+  limit: '100',
+  allowed_updates: JSON.stringify(['message', 'channel_post', 'my_chat_member'])
+});
+
+export function chatsFromUpdates(updates) {
+  const chats = new Map();
+  for (const update of updates) {
+    const chat = (update.message ?? update.channel_post ?? update.my_chat_member)?.chat;
+    if (!chat || chats.has(chat.id)) continue;
+    const name = chat.title || [chat.first_name, chat.last_name].filter(Boolean).join(' ') || chat.username || String(chat.id);
+    chats.set(chat.id, { id: String(chat.id), name });
+  }
+  return [...chats.values()];
+}
 
 function cutPoint(text, limit) {
   const code = text.charCodeAt(limit - 1);
