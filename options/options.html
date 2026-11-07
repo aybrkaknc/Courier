@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="optTitle"></title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="optTitle"></h1>
+
+      <section id="api-permission" hidden>
+        <p data-i18n="optApiMissing"></p>
+        <button type="button" id="grant-api" data-i18n="optGrant"></button>
+      </section>
+
+      <form id="bot-form" novalidate>
+        <h2 data-i18n="optBotSection"></h2>
+
+        <label for="token" data-i18n="optToken"></label>
+        <div class="row">
+          <input id="token" type="password" autocomplete="off" spellcheck="false">
+          <button type="button" id="toggle-token" class="secondary" data-i18n="optShow"></button>
+        </div>
+        <p class="help" data-i18n="optTokenHelp"></p>
+
+        <label for="chat-id" data-i18n="optChatId"></label>
+        <input id="chat-id" type="text" autocomplete="off" spellcheck="false">
+        <p class="help" data-i18n="optChatIdHelp"></p>
+
+        <div class="row">
+          <button type="submit" data-i18n="optSave"></button>
+          <button type="button" id="test" class="secondary" data-i18n="optTest"></button>
+        </div>
+        <p id="status" role="status"></p>
+      </form>
+
+      <section>
+        <h2 data-i18n="optSendingSection"></h2>
+        <label class="check"><input id="silent" type="checkbox"> <span data-i18n="optSilent"></span></label>
+        <label class="check"><input id="no-preview" type="checkbox"> <span data-i18n="optNoPreview"></span></label>
+        <label class="check"><input id="direct-download" type="checkbox"> <span data-i18n="optDirect"></span></label>
+        <p class="help" data-i18n="optDirectHelp"></p>
+        <p class="help" data-i18n="optShortcutsHelp"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="optLanguageSection"></h2>
+        <select id="language" aria-labelledby="language-label">
+          <option value="auto" data-i18n="optLanguageAuto"></option>
+          <option value="en">English</option>
+          <option value="tr">Türkçe</option>
+        </select>
+        <p id="language-label" class="help" data-i18n="optLanguageHelp"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="optDataSection"></h2>
+        <button type="button" id="delete" class="danger" data-i18n="optDelete"></button>
+      </section>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

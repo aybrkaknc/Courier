@@ -1,0 +1,21 @@
+dist/
+.dev-profile/
+node_modules/
+*.crx
+
+# Secrets: never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
