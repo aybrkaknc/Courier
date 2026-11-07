@@ -4,9 +4,9 @@
   --surface: #ffffff;
   --text: #1f2937;
   --muted: #5b6472;
-  --accent: #1d6fa5;
+  --accent: #1a73e8;
   --accent-text: #ffffff;
-  --border: #c9d0d9;
+  --border: #d5dbe3;
   --error: #b42318;
   --success: #1b7a3d;
 }
@@ -17,9 +17,9 @@
     --surface: #1d2127;
     --text: #e8eaed;
     --muted: #a3abb6;
-    --accent: #5aa9dc;
+    --accent: #5ba4f5;
     --accent-text: #10151a;
-    --border: #3d434c;
+    --border: #343a43;
     --error: #ff8a80;
     --success: #7bd88f;
   }
@@ -30,7 +30,7 @@ body {
   padding: 24px 16px;
   background: var(--bg);
   color: var(--text);
-  font: 14px/1.5 system-ui, sans-serif;
+  font: 14px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
 }
 
 main {
@@ -284,4 +284,10 @@ a.button[hidden] {
 
 .steps #status {
   margin-top: 8px;
+}
+
+.group + .group {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }

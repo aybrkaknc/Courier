@@ -62,42 +62,44 @@
               </li>
             </ol>
           </form>
-
-          <section>
-            <h2 data-i18n="optLanguageSection"></h2>
-            <select id="language" aria-labelledby="language-label">
-              <option value="auto" data-i18n="optLanguageAuto"></option>
-              <option value="en">English</option>
-              <option value="tr">Türkçe</option>
-            </select>
-            <p id="language-label" class="help" data-i18n="optLanguageHelp"></p>
-          </section>
-
-          <section>
-            <h2 data-i18n="optDataSection"></h2>
-            <button type="button" id="delete" class="danger" data-i18n="optDelete"></button>
-          </section>
         </div>
 
         <div class="col">
           <section>
-            <h2 data-i18n="optSendingSection"></h2>
-            <label class="check"><input id="silent" type="checkbox"> <span data-i18n="optSilent"></span></label>
-            <label class="check"><input id="no-preview" type="checkbox"> <span data-i18n="optNoPreview"></span></label>
-            <label class="check"><input id="direct-download" type="checkbox"> <span data-i18n="optDirect"></span></label>
-            <p class="help" data-i18n="optDirectHelp"></p>
-          </section>
+            <div class="group">
+              <h2 data-i18n="optSendingSection"></h2>
+              <label class="check"><input id="silent" type="checkbox"> <span data-i18n="optSilent"></span></label>
+              <label class="check"><input id="no-preview" type="checkbox"> <span data-i18n="optNoPreview"></span></label>
+              <label class="check"><input id="direct-download" type="checkbox"> <span data-i18n="optDirect"></span></label>
+              <p class="help" data-i18n="optDirectHelp"></p>
+            </div>
 
-          <section>
-            <h2 data-i18n="optShortcutsSection"></h2>
-            <p class="help" data-i18n="optShortcutsDefaults"></p>
-            <ul id="shortcut-list">
-              <li><span data-i18n="cmdSendPage"></span> <kbd>Alt+Shift+1</kbd></li>
-              <li><span data-i18n="cmdSendScreenshot"></span> <kbd>Alt+Shift+2</kbd></li>
-              <li><span data-i18n="cmdSendArea"></span> <kbd>Alt+Shift+3</kbd></li>
-            </ul>
-            <p class="help" data-i18n="optShortcutsHelp"></p>
-            <button type="button" id="open-shortcuts" class="secondary" data-i18n="optShortcutsButton"></button>
+            <div class="group">
+              <h2 data-i18n="optShortcutsSection"></h2>
+              <p class="help" data-i18n="optShortcutsDefaults"></p>
+              <ul id="shortcut-list">
+                <li><span data-i18n="cmdSendPage"></span> <kbd>Alt+Shift+1</kbd></li>
+                <li><span data-i18n="cmdSendScreenshot"></span> <kbd>Alt+Shift+2</kbd></li>
+                <li><span data-i18n="cmdSendArea"></span> <kbd>Alt+Shift+3</kbd></li>
+              </ul>
+              <p class="help" data-i18n="optShortcutsHelp"></p>
+              <button type="button" id="open-shortcuts" class="secondary" data-i18n="optShortcutsButton"></button>
+            </div>
+
+            <div class="group">
+              <h2 data-i18n="optLanguageSection"></h2>
+              <select id="language" aria-labelledby="language-label">
+                <option value="auto" data-i18n="optLanguageAuto"></option>
+                <option value="en">English</option>
+                <option value="tr">Türkçe</option>
+              </select>
+              <p id="language-label" class="help" data-i18n="optLanguageHelp"></p>
+            </div>
+
+            <div class="group">
+              <h2 data-i18n="optDataSection"></h2>
+              <button type="button" id="delete" class="danger" data-i18n="optDelete"></button>
+            </div>
           </section>
         </div>
       </div>
